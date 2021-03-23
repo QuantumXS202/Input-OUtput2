@@ -71,7 +71,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d6ad3afd-8b01-485b-a1c7-dd763965095c"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/button8"",
+                    ""path"": ""<HID::Logitech Logitech Cordless RumblePad 2>/button8"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -82,7 +82,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a98778e0-0f6c-487d-b5ef-0210b98c37ff"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/stick/left"",
+                    ""path"": ""<Joystick>/stick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -93,7 +93,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""60667a45-9d60-439f-89df-0aa788339aea"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/stick/right"",
+                    ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -104,7 +104,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1b058ddd-a5bd-468a-a785-9c748f439117"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/stick/up"",
+                    ""path"": ""<Joystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -115,7 +115,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d09cb184-5082-4ead-bde0-a8096a2f39f3"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/stick/down"",
+                    ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -126,7 +126,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""768897b5-a782-4499-bd86-dddab0602950"",
-                    ""path"": ""<HID::Sony Interactive Entertainment Controller>/button7"",
+                    ""path"": ""<HID::Logitech Logitech Cordless RumblePad 2>/button7"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
