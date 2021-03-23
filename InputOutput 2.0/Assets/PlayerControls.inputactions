@@ -1,0 +1,212 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "64bacee7-2af2-4d83-aa3f-29d5d9c28df7",
+            "actions": [
+                {
+                    "name": "Grow",
+                    "type": "Button",
+                    "id": "bd19894f-e989-402d-b104-31a733fbc899",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DraaiLinks",
+                    "type": "Button",
+                    "id": "598b3d90-f797-4457-9e2f-3804ba9c9443",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DraaiRechts",
+                    "type": "Button",
+                    "id": "8f604f2b-5b94-4d86-9e13-05a9a9a47874",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DraaiOmhoog",
+                    "type": "Button",
+                    "id": "4a541631-23fa-4da2-a7fe-d050bb6649f4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DraaiOmlaag",
+                    "type": "Button",
+                    "id": "5154dbbf-9829-4252-962c-e3b1e3460c08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Smaller",
+                    "type": "Button",
+                    "id": "2ce287d8-bf96-4345-bb51-e2c02122942e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6ad3afd-8b01-485b-a1c7-dd763965095c",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/button8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a98778e0-0f6c-487d-b5ef-0210b98c37ff",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DraaiLinks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60667a45-9d60-439f-89df-0aa788339aea",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DraaiRechts",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b058ddd-a5bd-468a-a785-9c748f439117",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DraaiOmhoog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d09cb184-5082-4ead-bde0-a8096a2f39f3",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DraaiOmlaag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "768897b5-a782-4499-bd86-dddab0602950",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Smaller",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Kleur",
+            "id": "1be9c237-94b7-4ede-aed3-d00630528cde",
+            "actions": [
+                {
+                    "name": "Rondje",
+                    "type": "Button",
+                    "id": "c26bdc5e-324a-4837-89d3-edfbef0087af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Kruisje",
+                    "type": "Button",
+                    "id": "e8fa7fc3-5780-47c9-b548-f57f97d0b11b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Vierkantje",
+                    "type": "Button",
+                    "id": "2c45217f-a56f-4175-afc8-6ab48e40805a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Driehoekje",
+                    "type": "Button",
+                    "id": "9e342742-ccc6-4052-9687-e1c33ed9603e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6e16ed3b-fbbb-4481-aa36-3d66c477d737",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rondje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "746ae030-b39d-42e1-b995-387080dcd16b",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kruisje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "322b3aba-14a8-4d4c-9916-9ee6a2dddd45",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vierkantje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b349f3a4-14a5-4d79-a150-fddc18f29713",
+                    "path": "<HID::Sony Interactive Entertainment Controller>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Driehoekje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
