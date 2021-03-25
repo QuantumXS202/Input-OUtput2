@@ -9,6 +9,8 @@ public class Cube : MonoBehaviour
     public Material myMaterial;
 
     PlayerControls controls;
+
+    Vector2 move;
     
     void Awake()
     {
@@ -21,12 +23,15 @@ public class Cube : MonoBehaviour
         controls.Gameplay.DraaiOmhoog.performed += ctx => DraaiOmhoog();
         controls.Gameplay.DraaiOmlaag.performed += ctx => DraaiOmlaag();
         controls.Kleur.Rondje.performed += ctx => KleurRondje();
+        controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+        controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
 
     }
 
-    void Update()
+    void Update()                                                   
     {
-        
+        Vector2 m = new Vector2(move.x, move.y) * Time.deltaTime;
+        transform.Translate(m, Space.World);
     }
 
     void Groei()
@@ -46,12 +51,12 @@ public class Cube : MonoBehaviour
 
     void DraaiLinks()
     {
-        transform.Rotate(new Vector3(0f, 0f, 2f));
+      transform.Rotate(new Vector3(0f, 0f, 2f));
     }
 
     void DraaiRechts()
     {
-        transform.Rotate(new Vector3(0f, 0f, -2f));
+       transform.Rotate(new Vector3(0f, 0f, -2f));
     }
 
     void DraaiOmhoog()

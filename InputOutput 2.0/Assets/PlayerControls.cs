@@ -65,6 +65,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad55b402-c17c-4cca-9885-b170fc557d42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f0a4f9c-8cb6-4074-87b7-dabfa1a0da30"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -131,6 +147,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Smaller"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d183bf2-1314-48ba-bc7a-0471cb26c2cc"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -231,6 +269,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_DraaiOmhoog = m_Gameplay.FindAction("DraaiOmhoog", throwIfNotFound: true);
         m_Gameplay_DraaiOmlaag = m_Gameplay.FindAction("DraaiOmlaag", throwIfNotFound: true);
         m_Gameplay_Smaller = m_Gameplay.FindAction("Smaller", throwIfNotFound: true);
+        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Gameplay_Rotation = m_Gameplay.FindAction("Rotation", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -292,6 +332,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_DraaiOmhoog;
     private readonly InputAction m_Gameplay_DraaiOmlaag;
     private readonly InputAction m_Gameplay_Smaller;
+    private readonly InputAction m_Gameplay_Move;
+    private readonly InputAction m_Gameplay_Rotation;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -302,6 +344,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @DraaiOmhoog => m_Wrapper.m_Gameplay_DraaiOmhoog;
         public InputAction @DraaiOmlaag => m_Wrapper.m_Gameplay_DraaiOmlaag;
         public InputAction @Smaller => m_Wrapper.m_Gameplay_Smaller;
+        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
+        public InputAction @Rotation => m_Wrapper.m_Gameplay_Rotation;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -329,6 +373,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Smaller.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSmaller;
                 @Smaller.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSmaller;
                 @Smaller.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSmaller;
+                @Move.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Rotation.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
+                @Rotation.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
+                @Rotation.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -351,6 +401,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Smaller.started += instance.OnSmaller;
                 @Smaller.performed += instance.OnSmaller;
                 @Smaller.canceled += instance.OnSmaller;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
             }
         }
     }
@@ -420,6 +476,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnDraaiOmhoog(InputAction.CallbackContext context);
         void OnDraaiOmlaag(InputAction.CallbackContext context);
         void OnSmaller(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

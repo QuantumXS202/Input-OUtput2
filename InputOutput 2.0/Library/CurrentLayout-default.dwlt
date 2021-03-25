@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 471}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 1
-  controlID: 56
+  controlID: 124
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,7 +70,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 471}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
-  controlID: 57
+  controlID: 125
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 331, y: 471}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 103
+  controlID: 126
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 302, y: 200}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 104
+  controlID: 68
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,8 +235,8 @@ MonoBehaviour:
     y: 0
     width: 1099
     height: 596
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 17}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 331, y: 271}
   m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
-  controlID: 19
+  controlID: 127
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -400,9 +400,9 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6230eba4
-    m_LastClickedID: -1528090526
-    m_ExpandedIDs: 84791c962e67f2b3675baeb9d902f4d150602ae3c694211de5997d2a11387a4a378c5e5ffbc9906593834867b3c47471
+    m_SelectedIDs: 84730c3a
+    m_LastClickedID: 973894532
+    m_ExpandedIDs: 84791c962e67f2b3675baeb9d902f4d18af829dd50602ae3c694211dd80fbc29e5997d2a11387a4a378c5e5ffbc9906593834867b3c47471
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -484,6 +484,14 @@ MonoBehaviour:
       \"name\": \"Smaller\",\n                    \"type\": \"Button\",\n                   
       \"id\": \"2ce287d8-bf96-4345-bb51-e2c02122942e\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Move\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"ad55b402-c17c-4cca-9885-b170fc557d42\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Rotation\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"7f0a4f9c-8cb6-4074-87b7-dabfa1a0da30\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
       [\n                {\n                    \"name\": \"\",\n                   
       \"id\": \"d6ad3afd-8b01-485b-a1c7-dd763965095c\",\n                    \"path\":
@@ -519,10 +527,21 @@ MonoBehaviour:
       \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
       \"groups\": \"\",\n                    \"action\": \"Smaller\",\n                   
       \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
-      }\n            ]\n        },\n        {\n            \"name\": \"Kleur\",\n           
-      \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n            \"actions\":
-      [\n                {\n                    \"name\": \"Rondje\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0\",\n                    \"path\":
+      \"<Joystick>/stick/left\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"2d183bf2-1314-48ba-bc7a-0471cb26c2cc\",\n                   
+      \"path\": \"<Gamepad>/rightStick/left\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"Rotation\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n           
+      ]\n        },\n        {\n            \"name\": \"Kleur\",\n            \"id\":
+      \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n            \"actions\": [\n               
+      {\n                    \"name\": \"Rondje\",\n                    \"type\":
+      \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
       \"name\": \"Kruisje\",\n                    \"type\": \"Button\",\n                   
@@ -1138,7 +1157,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 560
+  m_LastVerticalScrollValue: 0
 --- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
