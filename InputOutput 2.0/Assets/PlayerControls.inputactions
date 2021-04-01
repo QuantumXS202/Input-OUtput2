@@ -100,6 +100,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Audio2",
+                    "type": "Button",
+                    "id": "706fd83c-99ca-43a9-ad4c-72672d7217f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -232,6 +240,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Audio",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e10068e-1afa-4000-b528-47628e5af063",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Audio2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

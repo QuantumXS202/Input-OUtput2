@@ -113,6 +113,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Audio2"",
+                    ""type"": ""Button"",
+                    ""id"": ""706fd83c-99ca-43a9-ad4c-72672d7217f9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -247,6 +255,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Audio"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e10068e-1afa-4000-b528-47628e5af063"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Audio2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -351,6 +370,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Rumble = m_Gameplay.FindAction("Rumble", throwIfNotFound: true);
         m_Gameplay_StopRumble = m_Gameplay.FindAction("StopRumble", throwIfNotFound: true);
         m_Gameplay_Audio = m_Gameplay.FindAction("Audio", throwIfNotFound: true);
+        m_Gameplay_Audio2 = m_Gameplay.FindAction("Audio2", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -418,6 +438,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Rumble;
     private readonly InputAction m_Gameplay_StopRumble;
     private readonly InputAction m_Gameplay_Audio;
+    private readonly InputAction m_Gameplay_Audio2;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -434,6 +455,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Rumble => m_Wrapper.m_Gameplay_Rumble;
         public InputAction @StopRumble => m_Wrapper.m_Gameplay_StopRumble;
         public InputAction @Audio => m_Wrapper.m_Gameplay_Audio;
+        public InputAction @Audio2 => m_Wrapper.m_Gameplay_Audio2;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -479,6 +501,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
                 @Audio.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
                 @Audio.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
+                @Audio2.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
+                @Audio2.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
+                @Audio2.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -519,6 +544,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio.started += instance.OnAudio;
                 @Audio.performed += instance.OnAudio;
                 @Audio.canceled += instance.OnAudio;
+                @Audio2.started += instance.OnAudio2;
+                @Audio2.performed += instance.OnAudio2;
+                @Audio2.canceled += instance.OnAudio2;
             }
         }
     }
@@ -594,6 +622,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnRumble(InputAction.CallbackContext context);
         void OnStopRumble(InputAction.CallbackContext context);
         void OnAudio(InputAction.CallbackContext context);
+        void OnAudio2(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {
