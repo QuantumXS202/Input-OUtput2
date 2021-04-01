@@ -15,7 +15,10 @@ public class Cube : MonoBehaviour
 
     Gamepad gamepad;
 
-    
+    public AudioSource audioSource;
+
+
+
     void Awake()
     {
         controls = new PlayerControls();
@@ -32,6 +35,7 @@ public class Cube : MonoBehaviour
         controls.Gameplay.Reload.performed += ctx => Reload();
         controls.Gameplay.Rumble.performed += ctx => Rumble();
         controls.Gameplay.StopRumble.performed += ctx => StopRumble();
+        controls.Gameplay.Audio.performed += ctx => Audio();
     }
 
     void Update()                                                   
@@ -82,12 +86,17 @@ public class Cube : MonoBehaviour
 
     void Rumble()
     {
-        Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+        Gamepad.current.SetMotorSpeeds(1f, 1f);
     }
 
     void StopRumble()
     {
         Gamepad.current.SetMotorSpeeds(0f, 0f);
+    }
+
+    void Audio()
+    {
+        audioSource.Play();
     }
 
 

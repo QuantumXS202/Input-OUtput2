@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Inspector
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 642}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 471}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 1
-  controlID: 56
+  controlID: 165
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 471}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
-  controlID: 57
+  controlID: 166
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 331, y: 271}
   m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
-  controlID: 123
+  controlID: 128
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -400,9 +400,9 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2dd1928
-    m_LastClickedID: 672783794
-    m_ExpandedIDs: a6afe19084791c9625039c9f2e67f2b3675baeb9d902f4d18af829dd50602ae3b17358f2c694211dd80fbc29e5997d2a11387a4a378c5e5ffbc9906593834867b3c47471
+    m_SelectedIDs: 2b1e7598
+    m_LastClickedID: -1737155029
+    m_ExpandedIDs: a6afe19084791c9625039c9f2e67f2b3675baeb9d902f4d1ed62dad98af829dd50602ae3b17358f2c694211dd80fbc29e5997d2a11387a4a378c5e5ffbc9906593834867b3c47471
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,6 +504,10 @@ MonoBehaviour:
       \"name\": \"StopRumble\",\n                    \"type\": \"Button\",\n                   
       \"id\": \"ced33c15-098b-4fc5-be28-35e8435a1261\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Audio\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"21b6241e-9d6c-46bd-b4c0-65bd7eef984e\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
       [\n                {\n                    \"name\": \"\",\n                   
       \"id\": \"d6ad3afd-8b01-485b-a1c7-dd763965095c\",\n                    \"path\":
@@ -563,9 +567,14 @@ MonoBehaviour:
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"StopRumble\",\n                   
       \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
-      }\n            ]\n        },\n        {\n            \"name\": \"Kleur\",\n           
-      \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n            \"actions\":
-      [\n                {\n                    \"name\": \"Rondje\",\n                   
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"46bd558b-cdc8-4bdb-9e27-1347c27a067b\",\n                    \"path\":
+      \"<Gamepad>/start\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Audio\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
+      {\n            \"name\": \"Kleur\",\n            \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"Rondje\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
@@ -812,9 +821,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 66fbffff
+      m_SelectedIDs: 1c370000
+      m_LastClickedID: 14108
+      m_ExpandedIDs: 92f9ffffa0f9ffff66fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1021,11 +1030,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\quinn\Documents\GitHub\Input-Output\Input-OUtput2\InputOutput
     2.0
@@ -1033,8 +1042,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a360000
-    m_LastClickedID: 13962
+    m_SelectedIDs: 88360000
+    m_LastClickedID: 13960
     m_ExpandedIDs: 000000008236000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1118,7 +1127,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 110
+  m_DirectoriesAreaWidth: 139
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52

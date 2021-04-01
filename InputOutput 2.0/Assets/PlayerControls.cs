@@ -105,6 +105,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Audio"",
+                    ""type"": ""Button"",
+                    ""id"": ""21b6241e-9d6c-46bd-b4c0-65bd7eef984e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -228,6 +236,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""StopRumble"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46bd558b-cdc8-4bdb-9e27-1347c27a067b"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Audio"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -331,6 +350,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
         m_Gameplay_Rumble = m_Gameplay.FindAction("Rumble", throwIfNotFound: true);
         m_Gameplay_StopRumble = m_Gameplay.FindAction("StopRumble", throwIfNotFound: true);
+        m_Gameplay_Audio = m_Gameplay.FindAction("Audio", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -397,6 +417,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Reload;
     private readonly InputAction m_Gameplay_Rumble;
     private readonly InputAction m_Gameplay_StopRumble;
+    private readonly InputAction m_Gameplay_Audio;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -412,6 +433,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
         public InputAction @Rumble => m_Wrapper.m_Gameplay_Rumble;
         public InputAction @StopRumble => m_Wrapper.m_Gameplay_StopRumble;
+        public InputAction @Audio => m_Wrapper.m_Gameplay_Audio;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -454,6 +476,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @StopRumble.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
                 @StopRumble.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
                 @StopRumble.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
+                @Audio.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
+                @Audio.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
+                @Audio.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -491,6 +516,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @StopRumble.started += instance.OnStopRumble;
                 @StopRumble.performed += instance.OnStopRumble;
                 @StopRumble.canceled += instance.OnStopRumble;
+                @Audio.started += instance.OnAudio;
+                @Audio.performed += instance.OnAudio;
+                @Audio.canceled += instance.OnAudio;
             }
         }
     }
@@ -565,6 +593,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnReload(InputAction.CallbackContext context);
         void OnRumble(InputAction.CallbackContext context);
         void OnStopRumble(InputAction.CallbackContext context);
+        void OnAudio(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

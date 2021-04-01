@@ -92,6 +92,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Audio",
+                    "type": "Button",
+                    "id": "21b6241e-9d6c-46bd-b4c0-65bd7eef984e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -213,6 +221,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "StopRumble",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46bd558b-cdc8-4bdb-9e27-1347c27a067b",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Audio",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
