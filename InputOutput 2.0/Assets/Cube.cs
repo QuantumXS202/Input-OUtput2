@@ -12,6 +12,9 @@ public class Cube : MonoBehaviour
     PlayerControls controls;
 
     Vector2 move;
+
+    Gamepad gamepad;
+
     
     void Awake()
     {
@@ -27,6 +30,8 @@ public class Cube : MonoBehaviour
         controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
         controls.Gameplay.Reload.performed += ctx => Reload();
+        controls.Gameplay.Rumble.performed += ctx => Rumble();
+        controls.Gameplay.StopRumble.performed += ctx => StopRumble();
     }
 
     void Update()                                                   
@@ -74,6 +79,17 @@ public class Cube : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    void Rumble()
+    {
+        Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+    }
+
+    void StopRumble()
+    {
+        Gamepad.current.SetMotorSpeeds(0f, 0f);
+    }
+
 
     void OnEnable()
     {

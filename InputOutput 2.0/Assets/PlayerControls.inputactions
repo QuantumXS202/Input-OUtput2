@@ -76,6 +76,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Rumble",
+                    "type": "Button",
+                    "id": "defeea23-821f-45b5-bc76-cc81c903ee30",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "StopRumble",
+                    "type": "Button",
+                    "id": "ced33c15-098b-4fc5-be28-35e8435a1261",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -170,11 +186,33 @@
                 {
                     "name": "",
                     "id": "2ed6bed2-2bcc-4cbf-92c6-3f5983755838",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06c0c683-54ce-440f-8de6-0ab4dc156089",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rumble",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d939226-b48a-4fb9-8c99-9130e4cca42d",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StopRumble",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -89,6 +89,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Rumble"",
+                    ""type"": ""Button"",
+                    ""id"": ""defeea23-821f-45b5-bc76-cc81c903ee30"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""StopRumble"",
+                    ""type"": ""Button"",
+                    ""id"": ""ced33c15-098b-4fc5-be28-35e8435a1261"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -183,11 +199,33 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2ed6bed2-2bcc-4cbf-92c6-3f5983755838"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06c0c683-54ce-440f-8de6-0ab4dc156089"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rumble"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d939226-b48a-4fb9-8c99-9130e4cca42d"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StopRumble"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -291,6 +329,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Rotation = m_Gameplay.FindAction("Rotation", throwIfNotFound: true);
         m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
+        m_Gameplay_Rumble = m_Gameplay.FindAction("Rumble", throwIfNotFound: true);
+        m_Gameplay_StopRumble = m_Gameplay.FindAction("StopRumble", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -355,6 +395,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Rotation;
     private readonly InputAction m_Gameplay_Reload;
+    private readonly InputAction m_Gameplay_Rumble;
+    private readonly InputAction m_Gameplay_StopRumble;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -368,6 +410,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Rotation => m_Wrapper.m_Gameplay_Rotation;
         public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
+        public InputAction @Rumble => m_Wrapper.m_Gameplay_Rumble;
+        public InputAction @StopRumble => m_Wrapper.m_Gameplay_StopRumble;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -404,6 +448,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Reload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
                 @Reload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
                 @Reload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
+                @Rumble.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRumble;
+                @Rumble.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRumble;
+                @Rumble.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRumble;
+                @StopRumble.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
+                @StopRumble.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
+                @StopRumble.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnStopRumble;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -435,6 +485,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Reload.started += instance.OnReload;
                 @Reload.performed += instance.OnReload;
                 @Reload.canceled += instance.OnReload;
+                @Rumble.started += instance.OnRumble;
+                @Rumble.performed += instance.OnRumble;
+                @Rumble.canceled += instance.OnRumble;
+                @StopRumble.started += instance.OnStopRumble;
+                @StopRumble.performed += instance.OnStopRumble;
+                @StopRumble.canceled += instance.OnStopRumble;
             }
         }
     }
@@ -507,6 +563,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+        void OnRumble(InputAction.CallbackContext context);
+        void OnStopRumble(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {
