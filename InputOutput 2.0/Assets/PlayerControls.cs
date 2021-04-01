@@ -81,13 +81,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""bea143d3-4b3d-40b9-ac81-6ae54235394f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""d6ad3afd-8b01-485b-a1c7-dd763965095c"",
-                    ""path"": ""<HID::Logitech Logitech Cordless RumblePad 2>/button8"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -98,7 +106,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a98778e0-0f6c-487d-b5ef-0210b98c37ff"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -109,7 +117,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""60667a45-9d60-439f-89df-0aa788339aea"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -120,7 +128,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1b058ddd-a5bd-468a-a785-9c748f439117"",
-                    ""path"": ""<Joystick>/stick/up"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -131,7 +139,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d09cb184-5082-4ead-bde0-a8096a2f39f3"",
-                    ""path"": ""<Joystick>/stick/down"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -142,7 +150,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""768897b5-a782-4499-bd86-dddab0602950"",
-                    ""path"": ""<HID::Logitech Logitech Cordless RumblePad 2>/button7"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -153,7 +161,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -164,11 +172,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2d183bf2-1314-48ba-bc7a-0471cb26c2cc"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ed6bed2-2bcc-4cbf-92c6-3f5983755838"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -271,6 +290,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Smaller = m_Gameplay.FindAction("Smaller", throwIfNotFound: true);
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Rotation = m_Gameplay.FindAction("Rotation", throwIfNotFound: true);
+        m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -334,6 +354,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Smaller;
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Rotation;
+    private readonly InputAction m_Gameplay_Reload;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -346,6 +367,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Smaller => m_Wrapper.m_Gameplay_Smaller;
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Rotation => m_Wrapper.m_Gameplay_Rotation;
+        public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -379,6 +401,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Rotation.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
                 @Rotation.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
                 @Rotation.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotation;
+                @Reload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -407,6 +432,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Rotation.started += instance.OnRotation;
                 @Rotation.performed += instance.OnRotation;
                 @Rotation.canceled += instance.OnRotation;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
@@ -478,6 +506,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSmaller(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

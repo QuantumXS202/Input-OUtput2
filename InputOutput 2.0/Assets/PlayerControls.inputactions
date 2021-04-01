@@ -68,13 +68,21 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "bea143d3-4b3d-40b9-ac81-6ae54235394f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "d6ad3afd-8b01-485b-a1c7-dd763965095c",
-                    "path": "<HID::Logitech Logitech Cordless RumblePad 2>/button8",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -85,7 +93,7 @@
                 {
                     "name": "",
                     "id": "a98778e0-0f6c-487d-b5ef-0210b98c37ff",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -96,7 +104,7 @@
                 {
                     "name": "",
                     "id": "60667a45-9d60-439f-89df-0aa788339aea",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -107,7 +115,7 @@
                 {
                     "name": "",
                     "id": "1b058ddd-a5bd-468a-a785-9c748f439117",
-                    "path": "<Joystick>/stick/up",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -118,7 +126,7 @@
                 {
                     "name": "",
                     "id": "d09cb184-5082-4ead-bde0-a8096a2f39f3",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -129,7 +137,7 @@
                 {
                     "name": "",
                     "id": "768897b5-a782-4499-bd86-dddab0602950",
-                    "path": "<HID::Logitech Logitech Cordless RumblePad 2>/button7",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -140,7 +148,7 @@
                 {
                     "name": "",
                     "id": "7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -151,11 +159,22 @@
                 {
                     "name": "",
                     "id": "2d183bf2-1314-48ba-bc7a-0471cb26c2cc",
-                    "path": "<Gamepad>/rightStick/left",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ed6bed2-2bcc-4cbf-92c6-3f5983755838",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

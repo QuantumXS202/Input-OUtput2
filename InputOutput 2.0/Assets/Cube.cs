@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class Cube : MonoBehaviour
@@ -25,7 +26,7 @@ public class Cube : MonoBehaviour
         controls.Kleur.Rondje.performed += ctx => KleurRondje();
         controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
-
+        controls.Gameplay.Reload.performed += ctx => Reload();
     }
 
     void Update()                                                   
@@ -67,6 +68,11 @@ public class Cube : MonoBehaviour
     void DraaiOmlaag()
     {
         transform.Rotate(new Vector3(0f, -2f, 0f));
+    }
+
+    void Reload()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
     void OnEnable()
