@@ -121,6 +121,38 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""HardRechts"",
+                    ""type"": ""Button"",
+                    ""id"": ""f9ffb504-2dda-4279-815f-22f8b9fb7566"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""HardLinks"",
+                    ""type"": ""Button"",
+                    ""id"": ""a972f2b5-5ff0-440d-9f07-0e8864631368"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""HardUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""2466c91e-81d2-47ad-81c3-712574894f64"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""HardOmlaag"",
+                    ""type"": ""Button"",
+                    ""id"": ""d0a0c098-0e9a-4e2f-8b5e-edc45fa364e1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -266,6 +298,50 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Audio2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c3e29f9-a61c-486b-b2a0-62af9b28a91b"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HardRechts"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db9f3721-5ebd-4aad-a45d-60f0f22cda2a"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HardLinks"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b497d97-e62c-412b-92cd-417afe3f6112"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HardUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2f4b3a4-152e-4710-948c-8ac65d9f026e"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HardOmlaag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -371,6 +447,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_StopRumble = m_Gameplay.FindAction("StopRumble", throwIfNotFound: true);
         m_Gameplay_Audio = m_Gameplay.FindAction("Audio", throwIfNotFound: true);
         m_Gameplay_Audio2 = m_Gameplay.FindAction("Audio2", throwIfNotFound: true);
+        m_Gameplay_HardRechts = m_Gameplay.FindAction("HardRechts", throwIfNotFound: true);
+        m_Gameplay_HardLinks = m_Gameplay.FindAction("HardLinks", throwIfNotFound: true);
+        m_Gameplay_HardUp = m_Gameplay.FindAction("HardUp", throwIfNotFound: true);
+        m_Gameplay_HardOmlaag = m_Gameplay.FindAction("HardOmlaag", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -439,6 +519,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_StopRumble;
     private readonly InputAction m_Gameplay_Audio;
     private readonly InputAction m_Gameplay_Audio2;
+    private readonly InputAction m_Gameplay_HardRechts;
+    private readonly InputAction m_Gameplay_HardLinks;
+    private readonly InputAction m_Gameplay_HardUp;
+    private readonly InputAction m_Gameplay_HardOmlaag;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -456,6 +540,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @StopRumble => m_Wrapper.m_Gameplay_StopRumble;
         public InputAction @Audio => m_Wrapper.m_Gameplay_Audio;
         public InputAction @Audio2 => m_Wrapper.m_Gameplay_Audio2;
+        public InputAction @HardRechts => m_Wrapper.m_Gameplay_HardRechts;
+        public InputAction @HardLinks => m_Wrapper.m_Gameplay_HardLinks;
+        public InputAction @HardUp => m_Wrapper.m_Gameplay_HardUp;
+        public InputAction @HardOmlaag => m_Wrapper.m_Gameplay_HardOmlaag;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -504,6 +592,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio2.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
                 @Audio2.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
                 @Audio2.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
+                @HardRechts.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
+                @HardRechts.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
+                @HardRechts.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
+                @HardLinks.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
+                @HardLinks.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
+                @HardLinks.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
+                @HardUp.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
+                @HardUp.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
+                @HardUp.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
+                @HardOmlaag.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
+                @HardOmlaag.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
+                @HardOmlaag.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -547,6 +647,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio2.started += instance.OnAudio2;
                 @Audio2.performed += instance.OnAudio2;
                 @Audio2.canceled += instance.OnAudio2;
+                @HardRechts.started += instance.OnHardRechts;
+                @HardRechts.performed += instance.OnHardRechts;
+                @HardRechts.canceled += instance.OnHardRechts;
+                @HardLinks.started += instance.OnHardLinks;
+                @HardLinks.performed += instance.OnHardLinks;
+                @HardLinks.canceled += instance.OnHardLinks;
+                @HardUp.started += instance.OnHardUp;
+                @HardUp.performed += instance.OnHardUp;
+                @HardUp.canceled += instance.OnHardUp;
+                @HardOmlaag.started += instance.OnHardOmlaag;
+                @HardOmlaag.performed += instance.OnHardOmlaag;
+                @HardOmlaag.canceled += instance.OnHardOmlaag;
             }
         }
     }
@@ -623,6 +735,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnStopRumble(InputAction.CallbackContext context);
         void OnAudio(InputAction.CallbackContext context);
         void OnAudio2(InputAction.CallbackContext context);
+        void OnHardRechts(InputAction.CallbackContext context);
+        void OnHardLinks(InputAction.CallbackContext context);
+        void OnHardUp(InputAction.CallbackContext context);
+        void OnHardOmlaag(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 608, y: 471}
   m_MaxSize: {x: 18003, y: 14042}
   vertical: 1
-  controlID: 165
+  controlID: 37
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,7 +70,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 608, y: 471}
   m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 166
+  controlID: 38
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 471}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 58
+  controlID: 39
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 302, y: 200}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 59
+  controlID: 40
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -237,7 +237,7 @@ MonoBehaviour:
     height: 596
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 17}
   - {fileID: 19}
@@ -245,7 +245,7 @@ MonoBehaviour:
   - {fileID: 21}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
+  m_Selected: 3
   m_LastSelected: 4
 --- !u!114 &11
 MonoBehaviour:
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 128
+  controlID: 102
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -400,9 +400,9 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ed46ea03
-    m_LastClickedID: 65685229
-    m_ExpandedIDs: a6afe19084791c966c9ba59b25039c9f2e67f2b3675baeb9d902f4d1ed62dad98af829dd50602ae3b17358f2c694211dd80fbc29e5997d2a11387a4a378c5e5ffbc9906593834867b3c47471
+    m_SelectedIDs: daf4da5d
+    m_LastClickedID: 1574630618
+    m_ExpandedIDs: a6afe19084791c966c9ba59b25039c9f2e67f2b3675baeb9d902f4d1d78eb4d4ed62dad98af829dd50602ae3b17358f21bf725f6d0b682f8c694211dd80fbc29e5997d2a568e3a3311387a4a378c5e5ffbc9906593834867b3c47471
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,7 +424,7 @@ MonoBehaviour:
     m_AdvancedDropdownState:
       states:
       - itemId: 371857150
-        selectedIndex: 0
+        selectedIndex: 2
         scroll: {x: 0, y: 0}
       - itemId: 1277967432
         selectedIndex: 1
@@ -453,7 +453,13 @@ MonoBehaviour:
       - itemId: 378383742
         selectedIndex: -1
         scroll: {x: 0, y: 0}
-    m_ManualPathEditMode: 1
+      - itemId: 1503333380
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 2034374643
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+    m_ManualPathEditMode: 0
   m_ActionAssetManager:
     m_AssetObjectForEditing: {fileID: 0}
     m_ImportedAssetObject: {fileID: -944628639613478452, guid: 401bf56163148f645b27145051503c2f,
@@ -511,6 +517,22 @@ MonoBehaviour:
       \"interactions\": \"\"\n                },\n                {\n                   
       \"name\": \"Audio2\",\n                    \"type\": \"Button\",\n                   
       \"id\": \"706fd83c-99ca-43a9-ad4c-72672d7217f9\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"HardRechts\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"f9ffb504-2dda-4279-815f-22f8b9fb7566\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"HardLinks\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"a972f2b5-5ff0-440d-9f07-0e8864631368\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"HardUp\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"2466c91e-81d2-47ad-81c3-712574894f64\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"HardOmlaag\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"d0a0c098-0e9a-4e2f-8b5e-edc45fa364e1\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
       [\n                {\n                    \"name\": \"\",\n                   
@@ -581,9 +603,31 @@ MonoBehaviour:
       \"path\": \"\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"Audio2\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
-      {\n            \"name\": \"Kleur\",\n            \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n           
-      \"actions\": [\n                {\n                    \"name\": \"Rondje\",\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"5c3e29f9-a61c-486b-b2a0-62af9b28a91b\",\n                   
+      \"path\": \"<Gamepad>/rightStick/right\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"HardRechts\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"db9f3721-5ebd-4aad-a45d-60f0f22cda2a\",\n                    \"path\":
+      \"<Gamepad>/rightStick/left\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"HardLinks\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"3b497d97-e62c-412b-92cd-417afe3f6112\",\n                   
+      \"path\": \"<Gamepad>/rightStick/up\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"HardUp\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n               
+      {\n                    \"name\": \"\",\n                    \"id\": \"c2f4b3a4-152e-4710-948c-8ac65d9f026e\",\n                   
+      \"path\": \"<Gamepad>/rightStick/down\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"HardOmlaag\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"Kleur\",\n           
+      \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n            \"actions\":
+      [\n                {\n                    \"name\": \"Rondje\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
@@ -722,9 +766,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -25.98065, y: -17.728775, z: -16.834492}
+    m_Target: {x: -23.30368, y: -18.064528, z: -20.092657}
     speed: 2
-    m_Value: {x: -25.98065, y: -17.728775, z: -16.834492}
+    m_Value: {x: -23.30368, y: -18.064528, z: -20.092657}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -770,13 +814,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.114829116, y: 0.856655, z: -0.21674271, w: -0.4538529}
+    m_Target: {x: -0.10668597, y: 0.8798337, z: -0.23528935, w: -0.39893994}
     speed: 2
-    m_Value: {x: -0.11482892, y: 0.8566536, z: -0.21674235, w: -0.45385215}
+    m_Value: {x: -0.106685795, y: 0.8798322, z: -0.23528896, w: -0.39893928}
   m_Size:
-    m_Target: 23.398872
+    m_Target: 25.243263
     speed: 2
-    m_Value: 23.398872
+    m_Value: 25.243263
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -830,8 +874,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 38360000
+      m_LastClickedID: 13880
       m_ExpandedIDs: 66fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -969,7 +1013,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1039,11 +1083,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\quinn\Documents\GitHub\Input-Output\Input-OUtput2\InputOutput
     2.0
@@ -1051,8 +1095,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90360000
-    m_LastClickedID: 13968
+    m_SelectedIDs: 8a360000
+    m_LastClickedID: 13962
     m_ExpandedIDs: 000000008a36000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1108,7 +1152,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006e320000e05601006a36000014de00008e8401000e300000fce80000443e0000a63d00008869ffff88e9000084970000fa3500004aaa00004eaa000046aa0000e448000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

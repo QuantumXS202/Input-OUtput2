@@ -108,6 +108,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "HardRechts",
+                    "type": "Button",
+                    "id": "f9ffb504-2dda-4279-815f-22f8b9fb7566",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "HardLinks",
+                    "type": "Button",
+                    "id": "a972f2b5-5ff0-440d-9f07-0e8864631368",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "HardUp",
+                    "type": "Button",
+                    "id": "2466c91e-81d2-47ad-81c3-712574894f64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "HardOmlaag",
+                    "type": "Button",
+                    "id": "d0a0c098-0e9a-4e2f-8b5e-edc45fa364e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -251,6 +283,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Audio2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c3e29f9-a61c-486b-b2a0-62af9b28a91b",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HardRechts",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db9f3721-5ebd-4aad-a45d-60f0f22cda2a",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HardLinks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b497d97-e62c-412b-92cd-417afe3f6112",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HardUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2f4b3a4-152e-4710-948c-8ac65d9f026e",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HardOmlaag",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

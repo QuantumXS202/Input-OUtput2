@@ -17,8 +17,6 @@ public class Cube : MonoBehaviour
 
     public AudioSource audioSource;
 
-
-
     void Awake()
     {
         controls = new PlayerControls();
@@ -36,6 +34,10 @@ public class Cube : MonoBehaviour
         controls.Gameplay.Rumble.performed += ctx => Rumble();
         controls.Gameplay.StopRumble.performed += ctx => StopRumble();
         controls.Gameplay.Audio.performed += ctx => Audio();
+        controls.Gameplay.HardRechts.performed += ctx => HardRechts();
+        controls.Gameplay.HardLinks.performed += ctx => HardLinks();
+        controls.Gameplay.HardUp.performed += ctx => HardUp();
+        controls.Gameplay.HardOmlaag.performed += ctx => HardOmlaag();
     }
 
     void Update()                                                   
@@ -47,11 +49,6 @@ public class Cube : MonoBehaviour
     void Groei()
     {
         transform.localScale *= 1.1f;
-    }
-
-    void KleurRondje()
-    {
-        
     }
 
     void Kleiner()
@@ -96,9 +93,33 @@ public class Cube : MonoBehaviour
 
     void Audio()
     {
-        audioSource.Play();
+        audioSource.Play();                                                                                    
     }
 
+    void HardRechts()
+    {
+        
+    }
+
+    void HardLinks()
+    {
+        
+    }
+
+    void HardUp()
+    {
+      
+    }
+
+    void HardOmlaag()
+    {
+      
+    }
+
+    void KleurRondje()
+    {
+
+    }
 
     void OnEnable()
     {
