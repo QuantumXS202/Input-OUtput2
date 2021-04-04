@@ -148,6 +148,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SongOne",
+                    "type": "Button",
+                    "id": "e143d91b-4fea-4e33-915b-f17bbfd464c1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SongTwo",
+                    "type": "Button",
+                    "id": "127d9602-957e-4304-9087-e03627d34221",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SongThree",
+                    "type": "Button",
+                    "id": "355713f3-3f64-4ede-adaa-5260e33851f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SongFour",
+                    "type": "Button",
+                    "id": "72013fac-e44d-4dc5-8486-aef2586c46db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -346,6 +378,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "SceneReload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b50510d1-75ef-4f46-8082-cfdf75759320",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SongOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1174ec7a-36fe-4c8f-a6f0-da2ccc281936",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SongTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bed2c49b-53dc-414b-979d-10dfc0222931",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SongThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fa9e254-602e-4b02-b118-6f76f30eff7d",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SongFour",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

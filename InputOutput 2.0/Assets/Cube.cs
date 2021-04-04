@@ -19,6 +19,14 @@ public class Cube : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public AudioSource audioSource1;
+
+    public AudioSource audioSource2;
+
+    public AudioSource audioSource3;
+
+    public AudioSource audioSource4;
+
     void Awake()
     {
         controls = new PlayerControls();
@@ -29,7 +37,6 @@ public class Cube : MonoBehaviour
         controls.Gameplay.DraaiRechts.performed += ctx => DraaiRechts();
         controls.Gameplay.DraaiOmhoog.performed += ctx => DraaiOmhoog();
         controls.Gameplay.DraaiOmlaag.performed += ctx => DraaiOmlaag();
-        controls.Kleur.Rondje.performed += ctx => KleurRondje();
         controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
         controls.Gameplay.Reload.performed += ctx => Reload();
@@ -41,6 +48,10 @@ public class Cube : MonoBehaviour
         controls.Gameplay.ScneFour.performed += ctx => SceneFour();
         controls.Gameplay.SceneFive.performed += ctx => SceneFive();
         controls.Gameplay.SceneReload.performed += ctx => SceneReload();
+        controls.Gameplay.SongOne.performed += ctx => SongOne();
+        controls.Gameplay.SongTwo.performed += ctx => SongTwo();
+        controls.Gameplay.SongThree.performed += ctx => SongThree();
+        controls.Gameplay.SongFour.performed += ctx => SongFour();
     }
 
     void Update()                                                   
@@ -99,11 +110,6 @@ public class Cube : MonoBehaviour
         audioSource.Play();                                                                                    
     }
 
-    void KleurRondje()
-    {
-
-    }
-
     void SceneTwo()
     {
         SceneManager.LoadScene("Scene1");
@@ -126,7 +132,27 @@ public class Cube : MonoBehaviour
 
     void SceneReload()
     {
-       
+
+    }
+
+    void SongOne()
+    {
+        audioSource1.Play();
+    }
+
+    void SongTwo()
+    {
+        audioSource2.Play();
+    }
+
+    void SongThree()
+    {
+        audioSource3.Play();
+    }
+
+    void SongFour()
+    {
+        audioSource4.Play();
     }
 
     void OnEnable()
