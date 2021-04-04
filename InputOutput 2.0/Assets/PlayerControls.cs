@@ -68,9 +68,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""ad55b402-c17c-4cca-9885-b170fc557d42"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -123,33 +123,41 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""HardRechts"",
+                    ""name"": ""SceneTwo"",
                     ""type"": ""Button"",
-                    ""id"": ""f9ffb504-2dda-4279-815f-22f8b9fb7566"",
+                    ""id"": ""00c68fad-f372-40fb-9f5b-573b63a14a5e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""HardLinks"",
+                    ""name"": ""SceneThree"",
                     ""type"": ""Button"",
-                    ""id"": ""a972f2b5-5ff0-440d-9f07-0e8864631368"",
+                    ""id"": ""39d7a2e8-4c53-45b2-aa7d-e0fb161d2cf2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""HardUp"",
+                    ""name"": ""ScneFour"",
                     ""type"": ""Button"",
-                    ""id"": ""2466c91e-81d2-47ad-81c3-712574894f64"",
+                    ""id"": ""df5f832d-cff6-4a4b-a3b2-b9661a0e44f5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""HardOmlaag"",
+                    ""name"": ""SceneFive"",
                     ""type"": ""Button"",
-                    ""id"": ""d0a0c098-0e9a-4e2f-8b5e-edc45fa364e1"",
+                    ""id"": ""0ab9f5b5-8c57-466d-96b7-a36484b45517"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SceneReload"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1dea6ea-2d0d-40ab-83ee-7981575549da"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -225,7 +233,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0"",
-                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -301,45 +309,56 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5c3e29f9-a61c-486b-b2a0-62af9b28a91b"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""id"": ""bc9693a4-b919-48d7-8f4f-5260a862e347"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HardRechts"",
+                    ""action"": ""SceneTwo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""db9f3721-5ebd-4aad-a45d-60f0f22cda2a"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""id"": ""bb62c312-23d2-4d3b-b5b4-44bc32ced116"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HardLinks"",
+                    ""action"": ""SceneThree"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3b497d97-e62c-412b-92cd-417afe3f6112"",
-                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""id"": ""db6c75d4-679a-48d7-96b5-1bbbc012480e"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HardUp"",
+                    ""action"": ""ScneFour"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c2f4b3a4-152e-4710-948c-8ac65d9f026e"",
-                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""id"": ""4c3620b1-5f9e-44b1-b32e-ed4ef51a5151"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HardOmlaag"",
+                    ""action"": ""SceneFive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77521ac8-c832-4519-8f28-e7afb453ef74"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneReload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -447,10 +466,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_StopRumble = m_Gameplay.FindAction("StopRumble", throwIfNotFound: true);
         m_Gameplay_Audio = m_Gameplay.FindAction("Audio", throwIfNotFound: true);
         m_Gameplay_Audio2 = m_Gameplay.FindAction("Audio2", throwIfNotFound: true);
-        m_Gameplay_HardRechts = m_Gameplay.FindAction("HardRechts", throwIfNotFound: true);
-        m_Gameplay_HardLinks = m_Gameplay.FindAction("HardLinks", throwIfNotFound: true);
-        m_Gameplay_HardUp = m_Gameplay.FindAction("HardUp", throwIfNotFound: true);
-        m_Gameplay_HardOmlaag = m_Gameplay.FindAction("HardOmlaag", throwIfNotFound: true);
+        m_Gameplay_SceneTwo = m_Gameplay.FindAction("SceneTwo", throwIfNotFound: true);
+        m_Gameplay_SceneThree = m_Gameplay.FindAction("SceneThree", throwIfNotFound: true);
+        m_Gameplay_ScneFour = m_Gameplay.FindAction("ScneFour", throwIfNotFound: true);
+        m_Gameplay_SceneFive = m_Gameplay.FindAction("SceneFive", throwIfNotFound: true);
+        m_Gameplay_SceneReload = m_Gameplay.FindAction("SceneReload", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -519,10 +539,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_StopRumble;
     private readonly InputAction m_Gameplay_Audio;
     private readonly InputAction m_Gameplay_Audio2;
-    private readonly InputAction m_Gameplay_HardRechts;
-    private readonly InputAction m_Gameplay_HardLinks;
-    private readonly InputAction m_Gameplay_HardUp;
-    private readonly InputAction m_Gameplay_HardOmlaag;
+    private readonly InputAction m_Gameplay_SceneTwo;
+    private readonly InputAction m_Gameplay_SceneThree;
+    private readonly InputAction m_Gameplay_ScneFour;
+    private readonly InputAction m_Gameplay_SceneFive;
+    private readonly InputAction m_Gameplay_SceneReload;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -540,10 +561,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @StopRumble => m_Wrapper.m_Gameplay_StopRumble;
         public InputAction @Audio => m_Wrapper.m_Gameplay_Audio;
         public InputAction @Audio2 => m_Wrapper.m_Gameplay_Audio2;
-        public InputAction @HardRechts => m_Wrapper.m_Gameplay_HardRechts;
-        public InputAction @HardLinks => m_Wrapper.m_Gameplay_HardLinks;
-        public InputAction @HardUp => m_Wrapper.m_Gameplay_HardUp;
-        public InputAction @HardOmlaag => m_Wrapper.m_Gameplay_HardOmlaag;
+        public InputAction @SceneTwo => m_Wrapper.m_Gameplay_SceneTwo;
+        public InputAction @SceneThree => m_Wrapper.m_Gameplay_SceneThree;
+        public InputAction @ScneFour => m_Wrapper.m_Gameplay_ScneFour;
+        public InputAction @SceneFive => m_Wrapper.m_Gameplay_SceneFive;
+        public InputAction @SceneReload => m_Wrapper.m_Gameplay_SceneReload;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -592,18 +614,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio2.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
                 @Audio2.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
                 @Audio2.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAudio2;
-                @HardRechts.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
-                @HardRechts.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
-                @HardRechts.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardRechts;
-                @HardLinks.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
-                @HardLinks.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
-                @HardLinks.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardLinks;
-                @HardUp.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
-                @HardUp.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
-                @HardUp.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardUp;
-                @HardOmlaag.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
-                @HardOmlaag.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
-                @HardOmlaag.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnHardOmlaag;
+                @SceneTwo.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneTwo;
+                @SceneTwo.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneTwo;
+                @SceneTwo.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneTwo;
+                @SceneThree.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneThree;
+                @SceneThree.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneThree;
+                @SceneThree.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneThree;
+                @ScneFour.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScneFour;
+                @ScneFour.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScneFour;
+                @ScneFour.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScneFour;
+                @SceneFive.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
+                @SceneFive.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
+                @SceneFive.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
+                @SceneReload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
+                @SceneReload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
+                @SceneReload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -647,18 +672,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Audio2.started += instance.OnAudio2;
                 @Audio2.performed += instance.OnAudio2;
                 @Audio2.canceled += instance.OnAudio2;
-                @HardRechts.started += instance.OnHardRechts;
-                @HardRechts.performed += instance.OnHardRechts;
-                @HardRechts.canceled += instance.OnHardRechts;
-                @HardLinks.started += instance.OnHardLinks;
-                @HardLinks.performed += instance.OnHardLinks;
-                @HardLinks.canceled += instance.OnHardLinks;
-                @HardUp.started += instance.OnHardUp;
-                @HardUp.performed += instance.OnHardUp;
-                @HardUp.canceled += instance.OnHardUp;
-                @HardOmlaag.started += instance.OnHardOmlaag;
-                @HardOmlaag.performed += instance.OnHardOmlaag;
-                @HardOmlaag.canceled += instance.OnHardOmlaag;
+                @SceneTwo.started += instance.OnSceneTwo;
+                @SceneTwo.performed += instance.OnSceneTwo;
+                @SceneTwo.canceled += instance.OnSceneTwo;
+                @SceneThree.started += instance.OnSceneThree;
+                @SceneThree.performed += instance.OnSceneThree;
+                @SceneThree.canceled += instance.OnSceneThree;
+                @ScneFour.started += instance.OnScneFour;
+                @ScneFour.performed += instance.OnScneFour;
+                @ScneFour.canceled += instance.OnScneFour;
+                @SceneFive.started += instance.OnSceneFive;
+                @SceneFive.performed += instance.OnSceneFive;
+                @SceneFive.canceled += instance.OnSceneFive;
+                @SceneReload.started += instance.OnSceneReload;
+                @SceneReload.performed += instance.OnSceneReload;
+                @SceneReload.canceled += instance.OnSceneReload;
             }
         }
     }
@@ -735,10 +763,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnStopRumble(InputAction.CallbackContext context);
         void OnAudio(InputAction.CallbackContext context);
         void OnAudio2(InputAction.CallbackContext context);
-        void OnHardRechts(InputAction.CallbackContext context);
-        void OnHardLinks(InputAction.CallbackContext context);
-        void OnHardUp(InputAction.CallbackContext context);
-        void OnHardOmlaag(InputAction.CallbackContext context);
+        void OnSceneTwo(InputAction.CallbackContext context);
+        void OnSceneThree(InputAction.CallbackContext context);
+        void OnScneFour(InputAction.CallbackContext context);
+        void OnSceneFive(InputAction.CallbackContext context);
+        void OnSceneReload(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

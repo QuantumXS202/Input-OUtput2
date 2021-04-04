@@ -55,9 +55,9 @@
                 },
                 {
                     "name": "Move",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "ad55b402-c17c-4cca-9885-b170fc557d42",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 },
@@ -110,33 +110,41 @@
                     "interactions": ""
                 },
                 {
-                    "name": "HardRechts",
+                    "name": "SceneTwo",
                     "type": "Button",
-                    "id": "f9ffb504-2dda-4279-815f-22f8b9fb7566",
+                    "id": "00c68fad-f372-40fb-9f5b-573b63a14a5e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "HardLinks",
+                    "name": "SceneThree",
                     "type": "Button",
-                    "id": "a972f2b5-5ff0-440d-9f07-0e8864631368",
+                    "id": "39d7a2e8-4c53-45b2-aa7d-e0fb161d2cf2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "HardUp",
+                    "name": "ScneFour",
                     "type": "Button",
-                    "id": "2466c91e-81d2-47ad-81c3-712574894f64",
+                    "id": "df5f832d-cff6-4a4b-a3b2-b9661a0e44f5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "HardOmlaag",
+                    "name": "SceneFive",
                     "type": "Button",
-                    "id": "d0a0c098-0e9a-4e2f-8b5e-edc45fa364e1",
+                    "id": "0ab9f5b5-8c57-466d-96b7-a36484b45517",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SceneReload",
+                    "type": "Button",
+                    "id": "c1dea6ea-2d0d-40ab-83ee-7981575549da",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -212,7 +220,7 @@
                 {
                     "name": "",
                     "id": "7a9c5f71-2cf1-4342-a8e8-c11cd91c9da0",
-                    "path": "<Gamepad>/dpad/right",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -288,45 +296,56 @@
                 },
                 {
                     "name": "",
-                    "id": "5c3e29f9-a61c-486b-b2a0-62af9b28a91b",
-                    "path": "<Gamepad>/rightStick/right",
+                    "id": "bc9693a4-b919-48d7-8f4f-5260a862e347",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HardRechts",
+                    "action": "SceneTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "db9f3721-5ebd-4aad-a45d-60f0f22cda2a",
-                    "path": "<Gamepad>/rightStick/left",
+                    "id": "bb62c312-23d2-4d3b-b5b4-44bc32ced116",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HardLinks",
+                    "action": "SceneThree",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "3b497d97-e62c-412b-92cd-417afe3f6112",
-                    "path": "<Gamepad>/rightStick/up",
+                    "id": "db6c75d4-679a-48d7-96b5-1bbbc012480e",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HardUp",
+                    "action": "ScneFour",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "c2f4b3a4-152e-4710-948c-8ac65d9f026e",
-                    "path": "<Gamepad>/rightStick/down",
+                    "id": "4c3620b1-5f9e-44b1-b32e-ed4ef51a5151",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HardOmlaag",
+                    "action": "SceneFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77521ac8-c832-4519-8f28-e7afb453ef74",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SceneReload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -15,6 +15,8 @@ public class Cube : MonoBehaviour
 
     Gamepad gamepad;
 
+    public float position;
+
     public AudioSource audioSource;
 
     void Awake()
@@ -34,10 +36,11 @@ public class Cube : MonoBehaviour
         controls.Gameplay.Rumble.performed += ctx => Rumble();
         controls.Gameplay.StopRumble.performed += ctx => StopRumble();
         controls.Gameplay.Audio.performed += ctx => Audio();
-        controls.Gameplay.HardRechts.performed += ctx => HardRechts();
-        controls.Gameplay.HardLinks.performed += ctx => HardLinks();
-        controls.Gameplay.HardUp.performed += ctx => HardUp();
-        controls.Gameplay.HardOmlaag.performed += ctx => HardOmlaag();
+        controls.Gameplay.SceneTwo.performed += ctx => SceneTwo();
+        controls.Gameplay.SceneThree.performed += ctx => SceneThree();
+        controls.Gameplay.ScneFour.performed += ctx => SceneFour();
+        controls.Gameplay.SceneFive.performed += ctx => SceneFive();
+        controls.Gameplay.SceneReload.performed += ctx => SceneReload();
     }
 
     void Update()                                                   
@@ -96,29 +99,34 @@ public class Cube : MonoBehaviour
         audioSource.Play();                                                                                    
     }
 
-    void HardRechts()
-    {
-        
-    }
-
-    void HardLinks()
-    {
-        
-    }
-
-    void HardUp()
-    {
-      
-    }
-
-    void HardOmlaag()
-    {
-      
-    }
-
     void KleurRondje()
     {
 
+    }
+
+    void SceneTwo()
+    {
+        SceneManager.LoadScene("Scene1");
+    }
+
+    void SceneThree()
+    {
+        SceneManager.LoadScene("Scene2");
+    }
+
+    void SceneFour()
+    {
+        SceneManager.LoadScene("Scene3");
+    }
+
+    void SceneFive()
+    {
+        SceneManager.LoadScene("Scene4");
+    }
+
+    void SceneReload()
+    {
+       
     }
 
     void OnEnable()
