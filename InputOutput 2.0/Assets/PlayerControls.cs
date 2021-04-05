@@ -155,14 +155,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SceneReload"",
-                    ""type"": ""Button"",
-                    ""id"": ""c1dea6ea-2d0d-40ab-83ee-7981575549da"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""SongOne"",
                     ""type"": ""Button"",
                     ""id"": ""e143d91b-4fea-4e33-915b-f17bbfd464c1"",
@@ -385,17 +377,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""77521ac8-c832-4519-8f28-e7afb453ef74"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SceneReload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""b50510d1-75ef-4f46-8082-cfdf75759320"",
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
@@ -430,7 +411,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2fa9e254-602e-4b02-b118-6f76f30eff7d"",
-                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -546,7 +527,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_SceneThree = m_Gameplay.FindAction("SceneThree", throwIfNotFound: true);
         m_Gameplay_ScneFour = m_Gameplay.FindAction("ScneFour", throwIfNotFound: true);
         m_Gameplay_SceneFive = m_Gameplay.FindAction("SceneFive", throwIfNotFound: true);
-        m_Gameplay_SceneReload = m_Gameplay.FindAction("SceneReload", throwIfNotFound: true);
         m_Gameplay_SongOne = m_Gameplay.FindAction("SongOne", throwIfNotFound: true);
         m_Gameplay_SongTwo = m_Gameplay.FindAction("SongTwo", throwIfNotFound: true);
         m_Gameplay_SongThree = m_Gameplay.FindAction("SongThree", throwIfNotFound: true);
@@ -623,7 +603,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_SceneThree;
     private readonly InputAction m_Gameplay_ScneFour;
     private readonly InputAction m_Gameplay_SceneFive;
-    private readonly InputAction m_Gameplay_SceneReload;
     private readonly InputAction m_Gameplay_SongOne;
     private readonly InputAction m_Gameplay_SongTwo;
     private readonly InputAction m_Gameplay_SongThree;
@@ -649,7 +628,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @SceneThree => m_Wrapper.m_Gameplay_SceneThree;
         public InputAction @ScneFour => m_Wrapper.m_Gameplay_ScneFour;
         public InputAction @SceneFive => m_Wrapper.m_Gameplay_SceneFive;
-        public InputAction @SceneReload => m_Wrapper.m_Gameplay_SceneReload;
         public InputAction @SongOne => m_Wrapper.m_Gameplay_SongOne;
         public InputAction @SongTwo => m_Wrapper.m_Gameplay_SongTwo;
         public InputAction @SongThree => m_Wrapper.m_Gameplay_SongThree;
@@ -714,9 +692,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SceneFive.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
                 @SceneFive.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
                 @SceneFive.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
-                @SceneReload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
-                @SceneReload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
-                @SceneReload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneReload;
                 @SongOne.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
                 @SongOne.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
                 @SongOne.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
@@ -784,9 +759,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SceneFive.started += instance.OnSceneFive;
                 @SceneFive.performed += instance.OnSceneFive;
                 @SceneFive.canceled += instance.OnSceneFive;
-                @SceneReload.started += instance.OnSceneReload;
-                @SceneReload.performed += instance.OnSceneReload;
-                @SceneReload.canceled += instance.OnSceneReload;
                 @SongOne.started += instance.OnSongOne;
                 @SongOne.performed += instance.OnSongOne;
                 @SongOne.canceled += instance.OnSongOne;
@@ -879,7 +851,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSceneThree(InputAction.CallbackContext context);
         void OnScneFour(InputAction.CallbackContext context);
         void OnSceneFive(InputAction.CallbackContext context);
-        void OnSceneReload(InputAction.CallbackContext context);
         void OnSongOne(InputAction.CallbackContext context);
         void OnSongTwo(InputAction.CallbackContext context);
         void OnSongThree(InputAction.CallbackContext context);

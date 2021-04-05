@@ -47,7 +47,6 @@ public class Cube : MonoBehaviour
         controls.Gameplay.SceneThree.performed += ctx => SceneThree();
         controls.Gameplay.ScneFour.performed += ctx => SceneFour();
         controls.Gameplay.SceneFive.performed += ctx => SceneFive();
-        controls.Gameplay.SceneReload.performed += ctx => SceneReload();
         controls.Gameplay.SongOne.performed += ctx => SongOne();
         controls.Gameplay.SongTwo.performed += ctx => SongTwo();
         controls.Gameplay.SongThree.performed += ctx => SongThree();

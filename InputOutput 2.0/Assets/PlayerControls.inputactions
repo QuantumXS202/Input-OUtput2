@@ -142,14 +142,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SceneReload",
-                    "type": "Button",
-                    "id": "c1dea6ea-2d0d-40ab-83ee-7981575549da",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "SongOne",
                     "type": "Button",
                     "id": "e143d91b-4fea-4e33-915b-f17bbfd464c1",
@@ -372,17 +364,6 @@
                 },
                 {
                     "name": "",
-                    "id": "77521ac8-c832-4519-8f28-e7afb453ef74",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SceneReload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b50510d1-75ef-4f46-8082-cfdf75759320",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
@@ -417,7 +398,7 @@
                 {
                     "name": "",
                     "id": "2fa9e254-602e-4b02-b118-6f76f30eff7d",
-                    "path": "<Gamepad>/dpad/down",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
