@@ -136,22 +136,22 @@ public class Cube : MonoBehaviour
 
     void SongOne()
     {
-        audioSource1.Play();
+        transform.Rotate(new Vector3(0f, 45f, 0f));
     }
 
     void SongTwo()
     {
-        audioSource2.Play();
+        transform.Rotate(new Vector3(0f, 0f, -45f));
     }
 
     void SongThree()
     {
-        audioSource3.Play();
+        transform.Rotate(new Vector3(0f, -45f, 0f));
     }
 
     void SongFour()
     {
-        audioSource4.Play();
+        transform.Rotate(new Vector3(0f, 0f, 45f));
     }
 
     void OnEnable()
