@@ -155,7 +155,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SongOne"",
+                    ""name"": ""ArrowUp"",
                     ""type"": ""Button"",
                     ""id"": ""e143d91b-4fea-4e33-915b-f17bbfd464c1"",
                     ""expectedControlType"": ""Button"",
@@ -182,6 +182,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""SongFour"",
                     ""type"": ""Button"",
                     ""id"": ""72013fac-e44d-4dc5-8486-aef2586c46db"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Touchpad"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab054850-8a75-4e01-815e-629df6422dcd"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -382,7 +390,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SongOne"",
+                    ""action"": ""ArrowUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -416,6 +424,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SongFour"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6dfa7223-b398-4205-b8af-755e3b18d20f"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Touchpad"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -527,10 +546,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_SceneThree = m_Gameplay.FindAction("SceneThree", throwIfNotFound: true);
         m_Gameplay_ScneFour = m_Gameplay.FindAction("ScneFour", throwIfNotFound: true);
         m_Gameplay_SceneFive = m_Gameplay.FindAction("SceneFive", throwIfNotFound: true);
-        m_Gameplay_SongOne = m_Gameplay.FindAction("SongOne", throwIfNotFound: true);
+        m_Gameplay_ArrowUp = m_Gameplay.FindAction("ArrowUp", throwIfNotFound: true);
         m_Gameplay_SongTwo = m_Gameplay.FindAction("SongTwo", throwIfNotFound: true);
         m_Gameplay_SongThree = m_Gameplay.FindAction("SongThree", throwIfNotFound: true);
         m_Gameplay_SongFour = m_Gameplay.FindAction("SongFour", throwIfNotFound: true);
+        m_Gameplay_Touchpad = m_Gameplay.FindAction("Touchpad", throwIfNotFound: true);
         // Kleur
         m_Kleur = asset.FindActionMap("Kleur", throwIfNotFound: true);
         m_Kleur_Rondje = m_Kleur.FindAction("Rondje", throwIfNotFound: true);
@@ -603,10 +623,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_SceneThree;
     private readonly InputAction m_Gameplay_ScneFour;
     private readonly InputAction m_Gameplay_SceneFive;
-    private readonly InputAction m_Gameplay_SongOne;
+    private readonly InputAction m_Gameplay_ArrowUp;
     private readonly InputAction m_Gameplay_SongTwo;
     private readonly InputAction m_Gameplay_SongThree;
     private readonly InputAction m_Gameplay_SongFour;
+    private readonly InputAction m_Gameplay_Touchpad;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -628,10 +649,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @SceneThree => m_Wrapper.m_Gameplay_SceneThree;
         public InputAction @ScneFour => m_Wrapper.m_Gameplay_ScneFour;
         public InputAction @SceneFive => m_Wrapper.m_Gameplay_SceneFive;
-        public InputAction @SongOne => m_Wrapper.m_Gameplay_SongOne;
+        public InputAction @ArrowUp => m_Wrapper.m_Gameplay_ArrowUp;
         public InputAction @SongTwo => m_Wrapper.m_Gameplay_SongTwo;
         public InputAction @SongThree => m_Wrapper.m_Gameplay_SongThree;
         public InputAction @SongFour => m_Wrapper.m_Gameplay_SongFour;
+        public InputAction @Touchpad => m_Wrapper.m_Gameplay_Touchpad;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -692,9 +714,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SceneFive.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
                 @SceneFive.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
                 @SceneFive.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneFive;
-                @SongOne.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
-                @SongOne.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
-                @SongOne.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongOne;
+                @ArrowUp.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnArrowUp;
+                @ArrowUp.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnArrowUp;
+                @ArrowUp.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnArrowUp;
                 @SongTwo.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongTwo;
                 @SongTwo.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongTwo;
                 @SongTwo.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongTwo;
@@ -704,6 +726,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SongFour.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongFour;
                 @SongFour.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongFour;
                 @SongFour.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSongFour;
+                @Touchpad.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTouchpad;
+                @Touchpad.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTouchpad;
+                @Touchpad.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTouchpad;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -759,9 +784,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SceneFive.started += instance.OnSceneFive;
                 @SceneFive.performed += instance.OnSceneFive;
                 @SceneFive.canceled += instance.OnSceneFive;
-                @SongOne.started += instance.OnSongOne;
-                @SongOne.performed += instance.OnSongOne;
-                @SongOne.canceled += instance.OnSongOne;
+                @ArrowUp.started += instance.OnArrowUp;
+                @ArrowUp.performed += instance.OnArrowUp;
+                @ArrowUp.canceled += instance.OnArrowUp;
                 @SongTwo.started += instance.OnSongTwo;
                 @SongTwo.performed += instance.OnSongTwo;
                 @SongTwo.canceled += instance.OnSongTwo;
@@ -771,6 +796,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SongFour.started += instance.OnSongFour;
                 @SongFour.performed += instance.OnSongFour;
                 @SongFour.canceled += instance.OnSongFour;
+                @Touchpad.started += instance.OnTouchpad;
+                @Touchpad.performed += instance.OnTouchpad;
+                @Touchpad.canceled += instance.OnTouchpad;
             }
         }
     }
@@ -851,10 +879,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSceneThree(InputAction.CallbackContext context);
         void OnScneFour(InputAction.CallbackContext context);
         void OnSceneFive(InputAction.CallbackContext context);
-        void OnSongOne(InputAction.CallbackContext context);
+        void OnArrowUp(InputAction.CallbackContext context);
         void OnSongTwo(InputAction.CallbackContext context);
         void OnSongThree(InputAction.CallbackContext context);
         void OnSongFour(InputAction.CallbackContext context);
+        void OnTouchpad(InputAction.CallbackContext context);
     }
     public interface IKleurActions
     {

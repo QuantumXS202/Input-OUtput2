@@ -142,7 +142,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SongOne",
+                    "name": "ArrowUp",
                     "type": "Button",
                     "id": "e143d91b-4fea-4e33-915b-f17bbfd464c1",
                     "expectedControlType": "Button",
@@ -169,6 +169,14 @@
                     "name": "SongFour",
                     "type": "Button",
                     "id": "72013fac-e44d-4dc5-8486-aef2586c46db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Touchpad",
+                    "type": "Button",
+                    "id": "ab054850-8a75-4e01-815e-629df6422dcd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -369,7 +377,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SongOne",
+                    "action": "ArrowUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -403,6 +411,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SongFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6dfa7223-b398-4205-b8af-755e3b18d20f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touchpad",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

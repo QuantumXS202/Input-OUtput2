@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.AI;
 
 
 public class Cube : MonoBehaviour
@@ -48,16 +47,20 @@ public class Cube : MonoBehaviour
         controls.Gameplay.SceneThree.performed += ctx => SceneThree();
         controls.Gameplay.ScneFour.performed += ctx => SceneFour();
         controls.Gameplay.SceneFive.performed += ctx => SceneFive();
-        controls.Gameplay.SongOne.performed += ctx => SongOne();
-        controls.Gameplay.SongTwo.performed += ctx => SongTwo();
-        controls.Gameplay.SongThree.performed += ctx => SongThree();
-        controls.Gameplay.SongFour.performed += ctx => SongFour();
+        //controls.Gameplay.ArrowUp.performed += ctx => ArrowUp();
+        //controls.Gameplay.SongTwo.performed += ctx => SongTwo();
+        //controls.Gameplay.SongThree.performed += ctx => SongThree();
+        //controls.Gameplay.SongFour.performed += ctx => SongFour();
     }
 
     void Update()                                                   
     {
         Vector2 m = new Vector2(move.x, move.y) * Time.deltaTime;
         transform.Translate(m, Space.World);
+
+        
+
+        
     }
 
     void Groei()
@@ -135,24 +138,24 @@ public class Cube : MonoBehaviour
 
     }
 
-    void SongOne()
+    void ArrowUp()
     {
-        transform.Rotate(new Vector3(0f, 45f, 0f));
+        //transform.Rotate(new Vector3(0f, 45f, 0f));
     }
 
     void SongTwo()
     {
-        transform.Rotate(new Vector3(0f, 0f, -45f));
+        //transform.Rotate(new Vector3(0f, 0f, -45f));
     }
 
     void SongThree()
     {
-        transform.Rotate(new Vector3(0f, -45f, 0f));
+        //transform.Rotate(new Vector3(0f, -45f, 0f));
     }
 
     void SongFour()
     {
-        transform.Rotate(new Vector3(0f, 0f, 45f));
+        //transform.Rotate(new Vector3(0f, 0f, 45f));
     }
 
     void OnEnable()
