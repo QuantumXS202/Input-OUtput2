@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 125
+  controlID: 57
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 85
+  controlID: 58
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -266,13 +266,13 @@ MonoBehaviour:
     height: 561
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -430,7 +430,7 @@ MonoBehaviour:
       \"id\": \"0ab9f5b5-8c57-466d-96b7-a36484b45517\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
-      \"name\": \"SongOne\",\n                    \"type\": \"Button\",\n                   
+      \"name\": \"ArrowUp\",\n                    \"type\": \"Button\",\n                   
       \"id\": \"e143d91b-4fea-4e33-915b-f17bbfd464c1\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
@@ -444,6 +444,10 @@ MonoBehaviour:
       \"interactions\": \"\"\n                },\n                {\n                   
       \"name\": \"SongFour\",\n                    \"type\": \"Button\",\n                   
       \"id\": \"72013fac-e44d-4dc5-8486-aef2586c46db\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Touchpad\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"ab054850-8a75-4e01-815e-629df6422dcd\",\n                    \"expectedControlType\":
       \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
       [\n                {\n                    \"name\": \"\",\n                   
@@ -540,7 +544,7 @@ MonoBehaviour:
       \"id\": \"b50510d1-75ef-4f46-8082-cfdf75759320\",\n                    \"path\":
       \"<Gamepad>/dpad/up\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"SongOne\",\n                    \"isComposite\": false,\n                   
+      \"action\": \"ArrowUp\",\n                    \"isComposite\": false,\n                   
       \"isPartOfComposite\": false\n                },\n                {\n                   
       \"name\": \"\",\n                    \"id\": \"1174ec7a-36fe-4c8f-a6f0-da2ccc281936\",\n                   
       \"path\": \"<Gamepad>/dpad/right\",\n                    \"interactions\":
@@ -556,10 +560,16 @@ MonoBehaviour:
       \"path\": \"<Gamepad>/dpad/left\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"SongFour\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
-      {\n            \"name\": \"Kleur\",\n            \"id\": \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n           
-      \"actions\": [\n                {\n                    \"name\": \"Rondje\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"6dfa7223-b398-4205-b8af-755e3b18d20f\",\n                   
+      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"Touchpad\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n           
+      ]\n        },\n        {\n            \"name\": \"Kleur\",\n            \"id\":
+      \"1be9c237-94b7-4ede-aed3-d00630528cde\",\n            \"actions\": [\n               
+      {\n                    \"name\": \"Rondje\",\n                    \"type\":
+      \"Button\",\n                    \"id\": \"c26bdc5e-324a-4837-89d3-edfbef0087af\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\"\n                },\n                {\n                   
       \"name\": \"Kruisje\",\n                    \"type\": \"Button\",\n                   
@@ -665,9 +675,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d6360000
-    m_LastClickedID: 14038
-    m_ExpandedIDs: 00000000d636000000ca9a3b
+    m_SelectedIDs: e6360000
+    m_LastClickedID: 14054
+    m_ExpandedIDs: 00000000e636000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -695,7 +705,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6360000
+    m_ExpandedIDs: 00000000e6360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -818,7 +828,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e320000
+      m_SelectedIDs: fc2f0000
       m_LastClickedID: 0
       m_ExpandedIDs: 66fbffff
       m_RenameOverlay:
@@ -880,9 +890,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.231077, y: 0.6309645, z: -11.070322}
+    m_Target: {x: 12.23662, y: 0.6870151, z: -11.03464}
     speed: 2
-    m_Value: {x: 12.231077, y: 0.6309645, z: -11.070322}
+    m_Value: {x: 12.23662, y: 0.6870151, z: -11.03464}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -932,9 +942,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.16865939, y: 0.37299752, z: -0.06915026, w: -0.90975004}
   m_Size:
-    m_Target: 1.5957334
+    m_Target: 4.6638885
     speed: 2
-    m_Value: 1.5957334
+    m_Value: 4.6638885
   m_Ortho:
     m_Target: 0
     speed: 2
